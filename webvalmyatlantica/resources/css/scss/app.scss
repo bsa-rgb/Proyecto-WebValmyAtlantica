@@ -1,0 +1,15 @@
+/*
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*/
+
+@import 'variables';
+@import 'public';
+@import 'dashboard';
+
+$color-valmy: #005596; // Un azul corporativo de ejemplo
+
+body {
+    background-color: $color-valmy !important;
+}
