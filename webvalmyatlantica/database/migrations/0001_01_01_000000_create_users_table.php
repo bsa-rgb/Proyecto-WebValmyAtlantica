@@ -17,6 +17,10 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+
+            $table->string('role')->default('client'); //administrador, empleado, cliente
+            $table->foreignID('companyID')->nulltable()->constrained('companies')->onDelete('set null');
+
             $table->rememberToken();
             $table->timestamps();
         });
