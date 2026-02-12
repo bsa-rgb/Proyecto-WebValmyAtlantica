@@ -13,10 +13,23 @@ return new class extends Migration
     {
         Schema::create('companies', function (Blueprint $table) {
             $table->id();
+            $table->string('nif')->unique();
             $table->string('name');
-            $table->string('cif')->unique();
-            // Este campo servirá para construir la URL de Energibid luego
+            
+            $table->string('phone', 20)->nullable();
+            $table->string('email')->nullable();
+            
+            // Dirección desglosada por partes
+            $table->string('address_type')->default('Calle');
+            $table->string('address_name');
+            $table->string('address_number');
+            $table->string('city');
+            $table->string('postal_code', 5); 
+            $table->string('province')->default('A Coruña');
+
+            // Este campo para construir la URL de Energibid
             $table->string('energibid_config_id')->nullable(); 
+            
             $table->timestamps();
         });
     }
