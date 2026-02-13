@@ -20,7 +20,16 @@ class CompanyFactory extends Factory
             'nif' => fake()->unique()->bothify('#########'),
             'name' => fake()->company(),
 
-            'phone' => fake()->bothify('')
+            // 'phone' => fake()->bothify('#########')
+            'phone' => fake()->regexify('6[0-9]{8}'),
+            'email' => fake()->unique()->safeEmail(),
+
+            'address_type' => fake()->randomElement(['Calle', 'Avenida', 'Plaza', 'Vía', 'Carretera']),
+            'address_name' => fake()->streetName(),
+            'address_number' => fake()->buildingNumber(),
+            'city' => fake()->city(),
+            'postal_code' => fake()->postCode(),
+            'province' => fake()->state(),
         ];
     }
 }
