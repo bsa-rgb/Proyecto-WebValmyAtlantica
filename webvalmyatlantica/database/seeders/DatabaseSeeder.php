@@ -3,6 +3,9 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Company;
+use Illuminate\Support\Facades\Hash;
+
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -15,11 +18,30 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        $Valmy = Company::create([
+            'nif' => '44026669T',
+            'name' => 'Valmy Atlántica',
+            'phone' => '981 261 704',
+            'email' => 'valmyatlantica@valmyatlantica.com',
+            'address_type' => 'Calle',
+            'address_name' => 'Juan Flórez',
+            'address_number' => '42',
+            'city' => 'A Coruña',
+            'postal_code' => '15004',
+            'province' => 'A Coruña',
+        ]);
 
         User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+            'password' => Hash::make('!aiFu%794_'),
+            'name' => 'Aiyana',
+            'surname1' => 'Funes',
+            'surname2' => 'Nomdedeu',
+            'birthdate' => '2003-01-17',
+            'email' => 'ayan@gm.com',
+            'phone' => '666623794',
+            'role' => 'admin',
+            'companyID' => $Valmy->id,
+            'is_main_contact' => true,
         ]);
     }
 }
