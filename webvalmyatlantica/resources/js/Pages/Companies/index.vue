@@ -1,3 +1,5 @@
+<!--
+
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
@@ -29,4 +31,24 @@ defineProps({
             </div>
         </div>
     </AuthenticatedLayout>
+</template>
+
+-->
+
+<template>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>NIF</th>
+                <th>Ciudad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="company in companies" :key="company.id">
+                
+            </tr>
+        </tbody>
+
+    </table>
 </template>
