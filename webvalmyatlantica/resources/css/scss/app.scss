@@ -1,17 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+// Se importan las variables y estilos base
+@use 'variables';
+@use 'public';
+@use 'dashboard';
 
-/*
-
-@import 'variables';
-@import 'public';
-@import 'dashboard';
-
-$color-valmy: #005596; // Un azul corporativo de ejemplo
+// Color corporativo de prueba
+$color-valmy: #005596;
 
 body {
     background-color: $color-valmy !important;
 }
-
-*/
