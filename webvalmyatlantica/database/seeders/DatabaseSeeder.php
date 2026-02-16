@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             'address_type' => 'Calle',
             'address_name' => 'Juan Flórez',
             'address_number' => '42',
+            'address_info' => '3o izquierda',
             'city' => 'A Coruña',
             'postal_code' => '15004',
             'province' => 'A Coruña',
