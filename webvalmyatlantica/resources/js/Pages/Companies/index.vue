@@ -1,5 +1,3 @@
-<!--
-
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
@@ -9,6 +7,8 @@ defineProps({
     companies: Array
 });
 </script>
+
+<!--
 
 <template>
     <Head title="Empresas" />
@@ -46,7 +46,9 @@ defineProps({
         </thead>
         <tbody>
             <tr v-for="company in companies" :key="company.id">
-                
+                <td>{{company.name}}</td>
+                <td>{{company.nif}}</td>
+                <td>{{company.city}}</td>
             </tr>
         </tbody>
 
