@@ -31,6 +31,19 @@ class DatabaseSeeder extends Seeder
             'postal_code' => '15004',
             'province' => 'A Coruña',
         ]);
+        
+        $probitas = Company::create([
+            'nif' => '57445974R',
+            'name' => 'Probitas S.A.',
+            'phone' => '984 251 601',
+            'email' => 'probitassa@probitassa.com',
+            'address_type' => 'Carretera',
+            'address_name' => 'Sin Fin',
+            'address_number' => '13',
+            'city' => 'Gijón',
+            'postal_code' => '33206',
+            'province' => 'Gijón',
+        ]);
 
         User::factory()->create([
             'password' => Hash::make('!aiFu%794_'),
@@ -42,6 +55,19 @@ class DatabaseSeeder extends Seeder
             'phone' => '666623794',
             'role' => 'admin',
             'companyID' => $Valmy->id,
+            'is_main_contact' => true,
+        ]);
+
+        User::factory()->create([
+            'password' => Hash::make('?bI10Ka¡'),
+            'name' => 'Biel',
+            'surname1' => 'Kaiser',
+            'surname2' => 'Llagaria',
+            'birthdate' => '2002-10-07',
+            'email' => 'bibre@yh.com',
+            'phone' => '614621381',
+            'role' => 'client',
+            'companyID' => $probitas->id,
             'is_main_contact' => true,
         ]);
     }
