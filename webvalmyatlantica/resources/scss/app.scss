@@ -1,12 +1,12 @@
 // Se importan las variables y estilos base
+
+/*
 @use 'variables';
 @use 'public';
 @use 'dashboard';
 
 
-/*
-
-// Color corporativo de prueba
+Color corporativo de prueba
 $color-valmy: #005596;
  
 body {
@@ -14,3 +14,9 @@ body {
 }
 
 */
+
+
+body{
+    background-color: peachpuff;
+    color: coral;
+}
