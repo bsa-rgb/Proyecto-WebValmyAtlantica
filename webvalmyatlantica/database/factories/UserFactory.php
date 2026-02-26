@@ -23,20 +23,22 @@ class UserFactory extends Factory
      */
     public function definition(): array
     {
+        $faker = \Faker\Factory::create('es_ES');
+
         return [
             'password' => static::$password ??= Hash::make('password'),
-            'name' => fake()->firstName(),
-            'surname1' => fake()->lastName(),
-            'surname2' => fake()->lastName(),
-            'birthdate' => fake()->dateTimeBetween('-100 years', '-18 years')->format('Y-m-d'),
-            'email' => fake()->unique()->safeEmail(),
+            'name' => $faker->firstName(),
+            'surname1' => $faker->lastName(),
+            'surname2' => $faker->lastName(),
+            'birthdate' => $faker->dateTimeBetween('-66 years', '-18 years')->format('Y-m-d'),
+            'email' => $faker->unique()->safeEmail(),
             'email_verified_at' => now(),
-            'phone' => fake()->regexify('6[0-9]{8}'),
+            'phone' => $faker->regexify('6[0-9]{8}'),
             
-            'role' => fake()->randomElement(['admin', 'employee', 'client']),
-            'companyID' => \App\Models\Company::factory(),
+            'role' => $faker->randomElement(['admin', 'employee', 'client']),
+            // 'companyID' => \App\Models\Company::factory(),
 
-            'is_main_contact' => fake()->boolean(20),
+            'is_main_contact' => $faker->boolean(20),
 
             'remember_token' => Str::random(10),
             

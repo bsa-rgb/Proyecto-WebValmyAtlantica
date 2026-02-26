@@ -27,7 +27,7 @@ class CompanyController extends Controller
             ->get();
         } else {
             //cliente solo ve la empresa a la que pertenece
-            $companies = Company::where('id', $user->companyID)->get();
+            $companies = Company::where('id', $user->company_id)->get();
         }
 
         //datos a la fase 3

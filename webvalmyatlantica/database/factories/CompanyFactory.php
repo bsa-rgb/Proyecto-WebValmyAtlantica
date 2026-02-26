@@ -16,20 +16,27 @@ class CompanyFactory extends Factory
      */
     public function definition(): array
     {
+        $faker = \Faker\Factory::create('es_ES');
+
         return [
-            'nif' => fake()->unique()->bothify('#########'),
-            'name' => fake()->company(),
+            'nif' => $faker->unique()->bothify('#########'),
+            'name' => $faker->company,
 
-            // 'phone' => fake()->bothify('#########')
-            'phone' => fake()->regexify('6[0-9]{8}'),
-            'email' => fake()->unique()->safeEmail(),
+            // 'phone' => $faker->bothify('#########')
+            'phone' => $faker->regexify('6[0-9]{8}'),
+            'email' => $faker->unique()->safeEmail(),
 
-            'address_type' => fake()->randomElement(['Calle', 'Avenida', 'Plaza', 'Vía', 'Carretera']),
-            'address_name' => fake()->streetName(),
-            'address_number' => fake()->buildingNumber(),
-            'city' => fake()->city(),
-            'postal_code' => fake()->postCode(),
-            'province' => fake()->state(),
+            'address_type' => $faker->streetPrefix,
+            'address_name' => match (rand (0,2)) {
+                0 => $faker->firstName(),
+                1 => $faker->lastName(),
+                2 => $faker->firstName() . ' ' . $faker->lastName(),
+            },
+            'address_number' => $faker->buildingNumber,
+            'city' => $faker->city,
+            // 'postal_code' => $faker->postCode(),
+            'postal_code' => $faker->regexify('[0-9]{5}'),
+            'province' => $faker->state,
         ];
     }
 }

@@ -26,7 +26,7 @@ class User extends Authenticatable
         'email',
         'phone',
         'role',
-        'companyID',
+        'company_id',
         'is_main_contact'
     ];
 

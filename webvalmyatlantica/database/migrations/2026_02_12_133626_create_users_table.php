@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('phone', 20)->nullable();
 
             $table->string('role')->default('client'); //administrador, empleado, cliente
-            $table->foreignId('companyID')->nullable()->constrained('companies')->onDelete('set null');
+            $table->foreignId('company_id')->nullable()->constrained('companies')->onDelete('set null');
 
             $table->boolean('is_main_contact')->default(false);
 
