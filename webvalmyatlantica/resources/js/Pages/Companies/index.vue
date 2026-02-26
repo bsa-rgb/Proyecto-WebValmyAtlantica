@@ -1,26 +1,25 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Head } from '@inertiajs/vue3';
-
-// Esto recibe los datos del controlador
-defineProps({
-    companies: Array
-});
+import { Head, router } from '@inertiajs/vue3';
 
 import { ref, watch } from 'vue';
 
-import { router } from '@inertiajs/vue3';
-
 import debounce from 'lodash/debounce';
 
-const search = ref(''); 
+
+// Esto recibe los datos del controlador
+const props = defineProps({
+    companies: Array,
+    filters: Object
+});
+
+
+const search = ref( props.filters.search|| ''); 
 
 watch(search, debounce((value) => {
     router.get('/companies',
-        { search: value }, {
-            preserveState: true,    //Evita que el input pierda el foco o se borre al recargar
-            replace: true           //Evita que cada tecla pulsada cree un nuevo historial en el navegador
-        },
+        {search: value},
+        {preserveState: true, replace: true}
     )
 }, 300));
 
