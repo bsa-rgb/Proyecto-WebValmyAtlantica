@@ -36,7 +36,7 @@ class UserFactory extends Factory
             'phone' => $faker->regexify('6[0-9]{8}'),
             
             'role' => $faker->randomElement(['admin', 'employee', 'client']),
-            // 'companyID' => \App\Models\Company::factory(),
+            // 'company_id' => \App\Models\Company::factory(),
 
             'is_main_contact' => $faker->boolean(20),
 
