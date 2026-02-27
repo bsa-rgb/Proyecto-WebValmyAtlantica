@@ -26,6 +26,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/companies', [CompanyController::class, 'index'])
     ->middleware(['auth'])
     ->name('companies.index');
+    Route::get('/companies/{company}', [CompanyController::class, 'show'])->name('companies.show');
 });
 
 require __DIR__.'/auth.php';

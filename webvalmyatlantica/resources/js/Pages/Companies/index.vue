@@ -1,6 +1,6 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Head, router } from '@inertiajs/vue3';
+import { Head, router, Link } from '@inertiajs/vue3';
 
 import { ref, watch } from 'vue';
 
@@ -36,7 +36,11 @@ watch(search, debounce((value) => {
         </thead>
         <tbody>
             <tr v-for="company in companies" :key="company.id">
-                <td>{{company.name}}</td>
+                <td>
+                    <Link :href="`/companies/${company.id}`">
+                        {{company.name}}
+                    </Link>
+                </td>
                 <td>{{company.nif}}</td>
                 <td>{{company.city}}</td>
             </tr>

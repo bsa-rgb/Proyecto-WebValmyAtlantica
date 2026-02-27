@@ -36,4 +36,14 @@ class CompanyController extends Controller
             'filters' => $request->only(['search'])
         ]);
     }
+
+    public function show(Company $company)
+    {
+        $company->load('users');
+
+        return Inertia::render('Companies/Show', [
+            'company'=>$company
+        ]);
+    }
+
 }
