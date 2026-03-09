@@ -12,6 +12,7 @@ class Company extends Model
     protected $fillable = [
         'nif',
         'name',
+        'slug',
         'phone',
         'email',
         'address_type',
@@ -21,7 +22,6 @@ class Company extends Model
         'city',
         'postal_code',
         'province',
-        'energibid_config_id',
     ];
 
     public function users()
@@ -29,4 +29,7 @@ class Company extends Model
         return $this->hasMany(User::class, 'company_id');
     }
 
+    public function getRouteKeyName(){
+        return 'slug';
+    }
 }
