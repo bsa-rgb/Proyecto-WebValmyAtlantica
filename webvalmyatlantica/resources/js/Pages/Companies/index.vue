@@ -37,7 +37,7 @@ watch(search, debounce((value) => {
         <tbody>
             <tr v-for="company in companies" :key="company.id">
                 <td>
-                    <Link :href="`/companies/${company.id}`">
+                    <Link :href="`/companies/${company.slug}`">
                         {{company.name}}
                     </Link>
                 </td>
