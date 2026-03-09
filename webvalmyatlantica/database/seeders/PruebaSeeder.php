@@ -21,6 +21,7 @@ class PruebaSeeder extends Seeder
         $Valmy = Company::create([
             'nif' => '44026669T',
             'name' => 'Valmy Atlántica',
+            'slug' => \Illuminate\Support\Str::slug('Valmy Atlántica)'),
             'phone' => '981 261 704',
             'email' => 'valmyatlantica@valmyatlantica.com',
             'address_type' => 'Calle',
@@ -35,6 +36,7 @@ class PruebaSeeder extends Seeder
         $probitas = Company::create([
             'nif' => '57445974R',
             'name' => 'Probitas S.A.',
+            'slug' => \Illuminate\Support\Str::slug('Probitas S.A.'),
             'phone' => '984 251 601',
             'email' => 'probitassa@probitassa.com',
             'address_type' => 'Carretera',

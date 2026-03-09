@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('nif')->unique();
             $table->string('name');
-            
+            $table->string('slug')->unique();
+                        
             $table->string('phone', 20);
             $table->string('email')->nullable();
             
@@ -32,6 +33,7 @@ return new class extends Migration
             $table->string('energibid_config_id')->nullable(); 
             
             $table->timestamps();
+
         });
     }
 
