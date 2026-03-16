@@ -1,9 +1,11 @@
 <script setup>
 import GuestLayout from '@/Layouts/GuestLayout.vue'
+import HeroSection from '@/Components/HeroSection.vue';
+
 </script>
 
 <template>
     <GuestLayout>
-        <h1>Landing Valmy Atlántica</h1>
+        <HeroSection />
     </GuestLayout>
 </template>
