@@ -1,5 +1,5 @@
 <script setup>
-import GuestLayout from '@/Layouts/GuestLayout.vue'
+import PublicLayout from '@/Layouts/PublicLayout.vue';
 import HeroSection from '@/Components/HeroSection.vue';
 
 </script>
