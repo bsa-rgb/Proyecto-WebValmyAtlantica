@@ -1,22 +1,15 @@
-// Se importan las variables y estilos base
+@use 'base/variables';
+@use 'base/typography';
+
+@use 'components/hero';
+@use 'components/services';
+
+@use 'layout/header';
+@use 'layout/footer';
 
 /*
-@use 'variables';
-@use 'public';
-@use 'dashboard';
-
-
-Color corporativo de prueba
-$color-valmy: #005596;
- 
-body {
-    background-color: $color-valmy !important;
-}
-
-*/
-
-
 body{
     background-color: peachpuff;
     color: coral;
 }
+*/
