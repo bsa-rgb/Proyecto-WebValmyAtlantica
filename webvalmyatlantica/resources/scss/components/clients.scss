@@ -1,0 +1,80 @@
+@use '../base/variables' as *;
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.clients {
+    background-color: $white;
+    padding: 4rem 1.25rem;
+}
+
+.clients-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.clients-title {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: $text-secondary;
+    margin-bottom: 2rem;
+}
+
+.clients-logos {
+    position: relative;
+    overflow: hidden;
+}
+
+.clients-logos::before,
+.clients-logos::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 2;
+}
+
+.clients-logos::before {
+    left: 0;
+    background: linear-gradient(to right, $white, transparent);
+}
+
+.clients-logos::after {
+    right: 0;
+    background: linear-gradient(to left, $white, transparent);
+}
+
+.logos-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 15s linear infinite;
+}
+
+.clients-logos:hover .logos-track {
+    animation-play-state: paused;
+}
+
+.client-logo {
+    flex-shrink: 0;
+    height: 60px;
+    background: $color-primary;
+    border-radius: 5px;
+    width: 120px;
+    margin-right: 2rem;
+    opacity: 0.6;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.client-logo:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
