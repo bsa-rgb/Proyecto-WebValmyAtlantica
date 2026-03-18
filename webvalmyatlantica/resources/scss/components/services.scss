@@ -1,2 +1,48 @@
 @use '../base/variables' as *;
 
+.services {
+    background-color: $white;
+    padding: 5rem 1.25rem;
+}
+
+.service-block {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    max-width: 1100px;
+    margin: 0 auto 4rem auto;
+}
+
+.service-block.reverse {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.service-image {
+    flex: 1;
+    height: 300px;
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+.service-text {
+    flex: 1;
+}
+
+.services-end {
+    max-width: 700px;
+    margin: 4rem auto;
+
+    h2 {
+        font-family: $font-heading;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    p {
+        color: $text-secondary;
+        text-align: justify;
+    }
+}
