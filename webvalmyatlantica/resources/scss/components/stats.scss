@@ -2,7 +2,7 @@
 
 .stats {
     background-color: $white;
-    padding: 5rem $rem-size-xl;
+    padding: 5rem 1.5rem;
 }
 
 .stats-container {
@@ -19,14 +19,14 @@
     flex: 1;
 
     h2 {
-        font-size: $rem-size-2xl;
+        font-size: 2rem;
         font-weight: $font-bold;
         color: $color-primary;
         margin-bottom: 10px;
     }
 
     .stat p {
-        font-size: $rem-size-sm;
+        font-size: 0.875rem;
         color: $text-secondary;
     }
 
