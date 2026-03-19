@@ -41,8 +41,8 @@ import { Icon } from '@iconify/vue';
       <div class="footer-col footer-social">
         <h4>Síguenos</h4>
         <ul>
-          <li><a href="#"><Icon icon="mdi:linkedin" /> LinkedIn</a></li>
-          <li><a href="#"><Icon icon="mdi:instagram" /> Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/valmy-atlantica-sl" target="_blank" rel="noopener"><Icon icon="mdi:linkedin" />LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/valmyatlantica" target="_blank" rel="noopener"><Icon icon="mdi:instagram" />Instagram</a></li>
         </ul>
         <a href="#contacto" class="footer-cta">Contáctanos</a>
       </div>
