@@ -5,7 +5,9 @@
   <section class="services">
 
     <div class="service-block">
-      <div class="service-image"></div>
+      <div class="service-image">
+        <img src="/images/lineabosque.jpg" alt="Imagen de una torre de corriente en medio de un bosque" />
+      </div>
       <div class="service-text">
         <h3>La energía también se decide</h3>
         <p>Las decisiones sobre energía influyen directamente en el rumbo de una empresa.</p>
@@ -14,7 +16,9 @@
     </div>
 
     <div class="service-block reverse">
-      <div class="service-image"></div>
+      <div class="service-image">
+        <img src="/images/windturbine.jpg" alt="Imagen de una torre de corriente en medio de un bosque" />
+      </div>
       <div class="service-text">
         <h3>Experiencia energética al lado de las empresas</h3>
         <p>Más de dos décadas trabajando en el sector energético junto a empresas de distintos sectores productivos.</p>
@@ -23,7 +27,9 @@
     </div>
 
     <div class="service-block">
-      <div class="service-image"></div>
+      <div class="service-image">
+        <img src="/images/solarpanels.jpg" alt="Imagen de una torre de corriente en medio de un bosque" />
+      </div>
       <div class="service-text">
         <h3>Comprender. Interpretar. Acompañar.</h3>
         <p>Analizamos cada situación energética y acompañamos a las empresas cuando tienen que tomar decisiones.</p>
