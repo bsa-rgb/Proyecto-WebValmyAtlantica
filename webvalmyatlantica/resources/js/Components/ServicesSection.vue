@@ -1,4 +1,5 @@
 <script setup>
+import { Link } from '@inertiajs/vue3';
 </script>
 
 <template>
@@ -11,7 +12,9 @@
       <div class="service-text">
         <h3>La energía también se decide</h3>
         <p>Las decisiones sobre energía influyen directamente en el rumbo de una empresa.</p>
-        <button class="button-primary">Saber más →</button>
+        <Link href="/servicios/energia" class="button-primary">
+          Saber más →
+        </Link>
       </div>
     </div>
 
@@ -22,7 +25,9 @@
       <div class="service-text">
         <h3>Experiencia energética al lado de las empresas</h3>
         <p>Más de dos décadas trabajando en el sector energético junto a empresas de distintos sectores productivos.</p>
-        <button class="button-primary">Saber más →</button>
+        <Link href="/servicios/experiencia" class="button-primary">
+          Saber más →
+        </Link>
       </div>
     </div>
 
@@ -33,7 +38,9 @@
       <div class="service-text">
         <h3>Comprender. Interpretar. Acompañar.</h3>
         <p>Analizamos cada situación energética y acompañamos a las empresas cuando tienen que tomar decisiones.</p>
-        <button class="button-primary">Saber más →</button>
+        <Link href="/servicios/acompanamiento" class="button-primary">
+          Saber más →
+        </Link>
       </div>
     </div>
 

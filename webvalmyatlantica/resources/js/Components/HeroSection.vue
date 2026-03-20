@@ -15,9 +15,9 @@
             <h3>Valmy Atlántica</h3>
             <h1>La mayor central de compras energéticas del noroeste</h1>
             <p>Más de 25 años optimizando el coste energético de empresas e industrias</p>
-            <button class="button-primary">
-                Saber más →
-            </button>
+            <Link href="/contacto" class="button-primary">
+                Contacta con nosotros
+            </Link>
         </div>
         
     </section>
