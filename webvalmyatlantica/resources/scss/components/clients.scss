@@ -1,10 +1,14 @@
-@use '../base/variables' as *;
+@use "../base/variables" as *;
 
 // Animación
 
 @keyframes scroll {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
 
 // Sección
@@ -56,7 +60,7 @@
     width: 120px;
     height: 100%;
     // Visual
-    content: '';
+    content: "";
     z-index: 2;
 }
 
@@ -100,7 +104,9 @@
     background: transparent;
     opacity: 0.55;
     // Transición
-    transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+    transition:
+        opacity 0.25s ease-in-out,
+        transform 0.25s ease-in-out;
 
     img {
         // Caja
@@ -109,6 +115,14 @@
         // Visual
         object-fit: contain;
     }
+
+    a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
 }
 
 .client-logo:hover {
