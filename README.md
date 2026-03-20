@@ -156,7 +156,7 @@ npm run build
 php artisan serve
 ```
 
-8. Abre en el navegador: [http://localhost:8000](http://localhost:8000)
+8. Abre en el navegador, probablemente en: [http://localhost:8000](http://localhost:8000)
 
 ---
 
