@@ -1,5 +1,8 @@
 @use '../base/variables' as *;
 
+
+// Navbar base
+
 .navbar {
     position: fixed;
     top: 0;
@@ -14,53 +17,128 @@
 }
 
 .navbar.scrolled {
-    position: fixed;
     background-color: $pale-white;
     backdrop-filter: blur(10px);
     padding: 5px 40px;
     border-bottom: 1px solid $border-color;
-
-    .navbar-logo img{
-        height: 60px;
-        transition: all 0.25s ease-out;
-    }
-
-    .nav-link{
-        color: $text-primary;
-    }
 }
+
+
+// Logo
 
 .navbar-logo {
     display: flex;
     align-items: center;
     gap: 10px;
 
-    img{
+    img {
         height: 75px;
         transition: all 0.5s ease-in;
     }
 }
 
+.navbar.scrolled .navbar-logo img {
+    height: 60px;
+    transition: all 0.25s ease-out;
+}
+
+// Links
+
 .nav-link {
     position: relative;
+    display: inline-block;
+    margin-left: 30px;
 
     color: $text-secondary;
     text-decoration: none;
-    margin-left: 30px;
-
     font-family: $font-primary;
     font-size: 1rem;
     font-weight: $font-medium;
     letter-spacing: 1px;
     text-transform: uppercase;
 
-    display: inline-block;
     transition: all 0.1s ease-in;
+
+    &:hover {
+        color: $color-primary;
+        transform: scale(1.05);
+        text-shadow: 0 0 0.5px currentColor;
+        transition: all 0.2s ease-out;
+    }
 }
 
-.nav-link:hover{
-    color: $color-primary;
-    transform: scale(1.05);
-    text-shadow: 0 0 0.5px currentColor;
-    transition: all 0.2s ease-out;
+.navbar.scrolled .nav-link {
+    color: $text-primary;
+}
+
+
+// Dropdown
+
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-trigger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dropdown-arrow {
+    font-size: 0.65rem;
+    display: inline-block;
+    transition: transform 0.25s ease;
+}
+
+.nav-dropdown.open .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 14px);
+    left: 50%;
+    min-width: 260px;
+    padding: 8px 0;
+
+    background-color: $pale-white;
+    backdrop-filter: blur(10px);
+    border: 1px solid $border-color;
+    border-radius: 6px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-50%) translateY(-6px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.nav-dropdown.open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    white-space: nowrap;
+
+    color: $text-primary;
+    text-decoration: none;
+    font-family: $font-primary;
+    font-size: 0.875rem;
+    font-weight: $font-medium;
+    letter-spacing: 0.5px;
+
+    transition: color 0.15s ease, background-color 0.15s ease;
+
+    &:hover {
+        color: $color-primary;
+        background-color: rgba($color-primary, 0.05);
+    }
 }
