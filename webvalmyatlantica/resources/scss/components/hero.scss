@@ -64,6 +64,7 @@
 }
 
 .button-primary {
+    display: inline-block;
     margin-top: 20px;
 
     background-color: $color-primary;
@@ -75,6 +76,7 @@
 
     font-size: 1rem;
     font-weight: $font-medium;
+    text-decoration: none;
 
     cursor: pointer;
 
