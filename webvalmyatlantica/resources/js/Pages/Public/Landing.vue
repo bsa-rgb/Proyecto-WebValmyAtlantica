@@ -4,7 +4,6 @@ import HeroSection from '@/Components/HeroSection.vue';
 import StatsSection from '@/Components/StatsSection.vue';
 import ServicesSection from '@/Components/ServicesSection.vue';
 import ClientsSection from '@/Components/ClientsSection.vue';
-import CTASection from '@/Components/CTASection.vue';
 
 </script>
 
@@ -14,6 +13,5 @@ import CTASection from '@/Components/CTASection.vue';
         <StatsSection />
         <ServicesSection />
         <ClientsSection />
-        <CTASection />
     </PublicLayout>
 </template>
