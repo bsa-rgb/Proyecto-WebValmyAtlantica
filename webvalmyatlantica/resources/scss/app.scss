@@ -6,13 +6,9 @@
 @use 'components/services';
 @use 'components/clients';
 @use 'components/cta';
+@use 'components/service-individual';
+@use 'components/contact';
+@use 'components/LoginTemporal';
 
 @use 'layout/navbar';
 @use 'layout/footer';
-
-/*
-body{
-    background-color: peachpuff;
-    color: coral;
-}
-*/
