@@ -1,4 +1,4 @@
-# Valmy Atlántica — Web corporativa
+#  <img src="public/images/favicon.png" alt="logo de Valmy Atlantica" style="height: 1em; vertical-align: middle;"> Valmy Atlántica — Web corporativa
 
 Este proyecto nace durante mi estancia en Valmy Atlántica en la Formación en Centros de Trabajo (FCT), donde me di cuenta de la necesidad de renovar su presencia digital. La web actual, basada en una solución prediseñada, presenta limitaciones tanto a nivel técnico como comunicativo, dificultando reflejar de manera adecuada la identidad y evolución de la empresa.
 
@@ -34,7 +34,17 @@ El proyecto se divide en dos partes:
 
 ### Capturas de pantalla
 
-*Próximamente*
+<div style="display: flex; gap: 10px;">
+  <figure style="width: 50%; text-align: center;">
+    <img src="public/images/docs/LandingHero.png" alt="Landing" style="width: 100%; border-radius: 8px;">
+    <figcaption>Sección Hero en Landing</figcaption>
+  </figure>
+
+  <figure style="width: 50%; text-align: center;">
+    <img src="public/images/docs/LandingBottom.png" alt="Servicios" style="width: 100%; border-radius: 8px;">
+    <figcaption>Footer y slider de clientes en Landing</figcaption>
+  </figure>
+</div>
 
 ---
 
